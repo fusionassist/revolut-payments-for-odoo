@@ -357,7 +357,7 @@ function Compatibility() {
           </div>
           <div className="lg:col-span-2 grid gap-6 sm:grid-cols-2">
             {[
-              { t: "Odoo 19", d: "Community & Enterprise" },
+              { t: "Odoo 18 & 19", d: "Community & Enterprise" },
               { t: "Deployment", d: "On-premise or Odoo.sh" },
               { t: "Clean install", d: "Add module, enter Revolut Merchant API key" },
               { t: "90 days support", d: "Free, included by Fusion Technologies" },
