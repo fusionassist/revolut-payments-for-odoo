@@ -77,14 +77,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Revolut Payment API" },
+      { name: "description", content: "Accept Revolut payments in Odoo" },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Revolut Payment API" },
+      { property: "og:description", content: "Accept Revolut payments in Odoo" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Revolut Payment API" },
+      { name: "twitter:description", content: "Accept Revolut payments in Odoo" },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/59e53b0f-8d1f-4b5d-921b-12174435f25b/id-preview-b4079b15--ddea3cbb-17d5-4589-aa3d-1a7e4675fb1c.lovable.app-1781515999795.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/59e53b0f-8d1f-4b5d-921b-12174435f25b/id-preview-b4079b15--ddea3cbb-17d5-4589-aa3d-1a7e4675fb1c.lovable.app-1781515999795.png" },
     ],
     links: [
       {
