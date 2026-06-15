@@ -356,7 +356,7 @@ function BannerSection() {
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg-purple">
         <img
-          src={banner}
+          src={banner.url}
           alt="Revolut Payment Gateway for Odoo"
           className="w-full"
         />
