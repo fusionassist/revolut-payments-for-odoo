@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import fusionLogo from "@/assets/fusion-logo.png";
 import banner from "@/assets/banner.png";
+import heroImg from "@/assets/revolut-hero.png.asset.json";
 import revolutPay from "@/assets/revolut-pay.png";
 import shotProviders from "@/assets/shot-providers.png";
 import shotConfig from "@/assets/shot-config.png";
@@ -55,6 +56,7 @@ function Landing() {
         <TrustBar />
         <Features />
         <Screenshots />
+        <BannerSection />
         <Security />
         <Compatibility />
         <CTA />
@@ -130,7 +132,7 @@ function Hero() {
         <div className="relative">
           <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-purple opacity-20 blur-2xl" />
           <img
-            src={banner}
+            src={heroImg.url}
             alt="Revolut Payment Gateway for Odoo — hosted checkout with Revolut Pay, cards, Google Pay and Pay by bank"
             className="w-full rounded-2xl border border-border shadow-lg-purple"
           />
@@ -285,6 +287,20 @@ function Screenshots() {
             </figure>
           ))}
         </div>
+      </div>
+    </section>
+  );
+}
+
+function BannerSection() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-16">
+      <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg-purple">
+        <img
+          src={banner}
+          alt="Revolut Payment Gateway for Odoo"
+          className="w-full"
+        />
       </div>
     </section>
   );
