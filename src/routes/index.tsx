@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Accept cards, Revolut Pay, Google Pay & Pay by bank in Odoo via Revolut's hosted checkout. Built by an official Odoo partner. Odoo 19 Community & Enterprise.",
+          "Accept cards, Revolut Pay, Google Pay & Pay by bank in Odoo via Revolut's hosted checkout. Built by an official Odoo partner. Odoo 18 & 19, Community & Enterprise.",
       },
       { property: "og:title", content: "Revolut Payment Gateway for Odoo" },
       {
@@ -77,12 +77,6 @@ function Header() {
             <div className="text-[11px] text-muted-foreground">by Fusion Technologies</div>
           </div>
         </div>
-        <nav className="hidden items-center gap-7 text-sm text-muted-foreground md:flex">
-          <a href="#features" className="hover:text-foreground">Features</a>
-          <a href="#screenshots" className="hover:text-foreground">Screenshots</a>
-          <a href="#security" className="hover:text-foreground">Security</a>
-          <a href="#compatibility" className="hover:text-foreground">Compatibility</a>
-        </nav>
         <a
           href="#cta"
           className="inline-flex items-center gap-1.5 rounded-lg bg-revolut px-4 py-2 text-sm font-semibold text-primary-foreground transition hover:bg-revolut-deep"
@@ -128,7 +122,7 @@ function Hero() {
             </a>
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
-            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> Odoo 19 Community & Enterprise</div>
+            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> Odoo 18 & 19 — Community & Enterprise</div>
             <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> 90 days free support</div>
             <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> PCI SAQ-A scope</div>
           </div>
@@ -149,12 +143,13 @@ function Hero() {
 function TrustBar() {
   return (
     <section className="border-y border-border bg-card">
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-6 px-6 py-5 text-sm text-muted-foreground">
-        <span className="font-medium text-foreground">A first-class payment provider — beside Stripe & PayPal</span>
-        <div className="flex items-center gap-5">
-          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">Stripe</span>
-          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">PayPal</span>
-          <span className="rounded-md border border-revolut bg-revolut px-3 py-1.5 font-semibold text-primary-foreground">Revolut</span>
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-6 px-6 py-5 text-sm text-muted-foreground md:justify-between">
+        <span className="font-medium text-foreground">A first-class Odoo payment provider — installed, enabled, published.</span>
+        <div className="flex flex-wrap items-center gap-3 text-xs">
+          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">Cards</span>
+          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">Revolut Pay</span>
+          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">Google Pay</span>
+          <span className="rounded-md border border-border bg-background px-3 py-1.5 font-semibold">Pay by bank</span>
         </div>
       </div>
     </section>
@@ -235,24 +230,39 @@ function Features() {
 function Screenshots() {
   const shots = [
     {
-      img: revolutApp,
-      title: "A first-class payment provider, beside Stripe and PayPal",
-      caption: "Revolut listed alongside Stripe and PayPal as an Odoo payment provider.",
+      img: shotProviders,
+      title: "Enabled & published in Odoo Payment Providers",
+      caption: "Revolut shows up natively in Settings → Payment Providers, ready to enable.",
     },
     {
-      img: banner,
-      title: "Simple configuration — one-click webhook setup",
-      caption: "Provider configuration: payment methods, currencies and refunds.",
+      img: shotConfig,
+      title: "Familiar Odoo provider configuration",
+      caption: "Test mode, payment methods (Card, Revolut Pay), 21 currencies, manual capture, full & partial refunds.",
     },
     {
-      img: banner,
-      title: "Secure hosted checkout — cards, Revolut Pay & more",
-      caption: "Hosted checkout page with cards, Revolut Pay, Google Pay and Pay by bank.",
+      img: shotMessages,
+      title: "Customisable customer-facing messages",
+      caption: "Help, pending, authorised, done and cancelled messages — editable from the standard Messages tab.",
     },
     {
-      img: revolutApp,
+      img: shotInvoice,
+      title: "Pay Now on the customer invoice portal",
+      caption: "Customers pay outstanding invoices in one click from the Odoo invoice portal.",
+    },
+    {
+      img: shotPaymentScreen,
+      title: "Native Odoo payment dialog",
+      caption: "Revolut appears beside other enabled methods in the standard Odoo /payment screen.",
+    },
+    {
+      img: shotMethods,
+      title: "Revolut's secure hosted checkout",
+      caption: "Revolut Pay, card, Google Pay and Pay by bank — branded with your business details.",
+    },
+    {
+      img: shotRefund,
       title: "Full & partial refunds from the payment record",
-      caption: "Refund a Revolut payment in full or in part directly from Odoo.",
+      caption: "Refund a Revolut payment in full or in part directly from the Odoo payment record.",
     },
   ];
   return (
@@ -267,7 +277,7 @@ function Screenshots() {
         <div className="mt-14 grid gap-8 md:grid-cols-2">
           {shots.map((s) => (
             <figure key={s.title} className="overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-              <img src={s.img} alt={s.caption} className="aspect-[16/9] w-full object-cover" />
+              <img src={s.img} alt={s.caption} className="w-full bg-white object-contain" />
               <figcaption className="p-6">
                 <div className="font-display text-base font-bold">{s.title}</div>
                 <div className="mt-1 text-sm text-muted-foreground">{s.caption}</div>
