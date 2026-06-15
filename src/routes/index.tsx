@@ -14,8 +14,14 @@ import {
 } from "lucide-react";
 import fusionLogo from "@/assets/fusion-logo.png";
 import banner from "@/assets/banner.png";
-import revolutApp from "@/assets/revolut-app.png";
 import revolutPay from "@/assets/revolut-pay.png";
+import shotProviders from "@/assets/shot-providers.png";
+import shotConfig from "@/assets/shot-config.png";
+import shotMessages from "@/assets/shot-messages.png";
+import shotInvoice from "@/assets/shot-invoice.png";
+import shotPaymentScreen from "@/assets/shot-paymentscreen.png";
+import shotMethods from "@/assets/shot-methods.png";
+import shotRefund from "@/assets/shot-refund.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
