@@ -56,6 +56,7 @@ function Landing() {
         <TrustBar />
         <Features />
         <Screenshots />
+        <BannerSection />
         <Security />
         <Compatibility />
         <CTA />
