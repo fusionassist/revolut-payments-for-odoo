@@ -13,7 +13,7 @@ import {
   Lock,
 } from "lucide-react";
 import fusionLogo from "@/assets/fusion-logo.png";
-import banner from "@/assets/banner.png";
+import banner from "@/assets/revolut-hero.png.asset.json";
 import heroImg from "@/assets/hero-banner.png.asset.json";
 import revolutPay from "@/assets/revolut-pay.png";
 import shotProviders from "@/assets/shot-providers.png";
