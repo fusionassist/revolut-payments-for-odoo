@@ -297,17 +297,17 @@ function Security() {
         <div>
           <div className="text-sm font-semibold uppercase tracking-wider text-revolut">Secure by design</div>
           <h2 className="mt-2 text-balance text-4xl font-bold text-revolut-deep md:text-5xl">
-            Hosted checkout. Lowest PCI scope.
+            PCI-compliant hosted checkout.
           </h2>
           <p className="mt-4 text-muted-foreground">
-            Payments use Revolut's hosted checkout, so sensitive card data never reaches your
-            Odoo instance — keeping you in the lowest PCI scope (SAQ-A). Webhook notifications
-            are cryptographically signature-verified with a timestamp tolerance and secret-rotation
-            support.
+            Payments use Revolut's PCI-compliant hosted checkout, so card data is handled by
+            Revolut and never reaches your Odoo instance. Webhook notifications are
+            cryptographically signature-verified with a timestamp tolerance and
+            secret-rotation support.
           </p>
           <ul className="mt-6 space-y-3 text-sm">
             {[
-              "Card data never touches Odoo (PCI SAQ-A)",
+              "PCI-compliant hosted checkout — card data handled by Revolut",
               "HMAC-SHA256 signed webhooks with timestamp tolerance",
               "Idempotent event processing — no double captures",
               "Secret rotation supported without downtime",
@@ -325,8 +325,8 @@ function Security() {
           <div className="absolute inset-0 -z-10 rounded-3xl bg-gradient-purple opacity-15 blur-2xl" />
           <div className="rounded-2xl border border-border bg-gradient-purple p-10 text-primary-foreground shadow-lg-purple">
             <Lock className="h-10 w-10 opacity-90" />
-            <div className="mt-6 font-display text-3xl font-bold">PCI SAQ-A</div>
-            <div className="mt-1 text-sm text-primary-foreground/80">Lowest merchant scope</div>
+            <div className="mt-6 font-display text-3xl font-bold">PCI-compliant</div>
+            <div className="mt-1 text-sm text-primary-foreground/80">Hosted checkout by Revolut</div>
             <div className="mt-8 grid grid-cols-2 gap-4 text-sm">
               <div className="rounded-xl bg-white/10 p-4">
                 <ShieldCheck className="h-5 w-5" />
@@ -360,7 +360,7 @@ function Compatibility() {
               { t: "Odoo 18 & 19", d: "Community & Enterprise" },
               { t: "Deployment", d: "On-premise or Odoo.sh" },
               { t: "Clean install", d: "Add module, enter Revolut Merchant API key" },
-              { t: "90 days support", d: "Free, included by Fusion Technologies" },
+              { t: "30 days setup support", d: "Free, included by Fusion Technologies" },
             ].map((i) => (
               <div key={i.t} className="rounded-xl border border-border bg-background p-6">
                 <div className="font-display text-lg font-bold">{i.t}</div>
