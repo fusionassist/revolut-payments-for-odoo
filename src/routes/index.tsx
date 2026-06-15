@@ -292,6 +292,20 @@ function Screenshots() {
   );
 }
 
+function BannerSection() {
+  return (
+    <section className="mx-auto max-w-6xl px-6 py-16">
+      <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg-purple">
+        <img
+          src={banner}
+          alt="Revolut Payment Gateway for Odoo"
+          className="w-full"
+        />
+      </div>
+    </section>
+  );
+}
+
 function Security() {
   return (
     <section id="security" className="mx-auto max-w-6xl px-6 py-24">
