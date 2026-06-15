@@ -24,24 +24,83 @@ import shotPaymentScreen from "@/assets/shot-paymentscreen.png";
 import shotMethods from "@/assets/shot-methods.png";
 import shotRefund from "@/assets/shot-refund.png";
 
+const SITE_URL = "https://revolut-pay-odoo-magic.lovable.app";
+const OG_IMAGE = `${SITE_URL}${heroImg.url}`;
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Revolut Payment Gateway for Odoo | Fusion Technologies" },
+      { title: "Revolut Payment Gateway for Odoo 18 & 19 | Fusion Technologies" },
       {
         name: "description",
         content:
-          "Accept cards, Revolut Pay, Google Pay & Pay by bank in Odoo via Revolut's hosted checkout. Built by an official Odoo partner. Odoo 18 & 19, Community & Enterprise.",
+          "Accept cards, Revolut Pay, Google Pay and Pay by bank in Odoo via Revolut's PCI-compliant hosted checkout. Built by an official Odoo partner. Works with Odoo 18 & 19, Community & Enterprise, on-premise or Odoo.sh.",
       },
-      { property: "og:title", content: "Revolut Payment Gateway for Odoo" },
+      { name: "keywords", content: "Revolut Odoo, Revolut payment gateway Odoo, Odoo 18 Revolut, Odoo 19 Revolut, Revolut Pay Odoo, Odoo payment provider, Fusion Technologies, Odoo Apps" },
+      { property: "og:title", content: "Revolut Payment Gateway for Odoo 18 & 19" },
       {
         property: "og:description",
         content:
-          "Hosted checkout for cards and Revolut Pay in Odoo. Built and supported by Fusion Technologies, an official Odoo partner.",
+          "Hosted checkout for cards, Revolut Pay, Google Pay and Pay by bank — straight from Odoo eCommerce and the customer invoice portal. Built by Fusion Technologies, an official Odoo partner.",
       },
-      { property: "og:image", content: banner },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_URL}/` },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:alt", content: "Revolut Payment Gateway for Odoo — hosted checkout with Revolut Pay, cards, Google Pay and Pay by bank" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: banner },
+      { name: "twitter:title", content: "Revolut Payment Gateway for Odoo 18 & 19" },
+      { name: "twitter:description", content: "Hosted checkout for cards, Revolut Pay, Google Pay and Pay by bank — directly inside Odoo." },
+      { name: "twitter:image", content: OG_IMAGE },
+    ],
+    links: [{ rel: "canonical", href: `${SITE_URL}/` }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "SoftwareApplication",
+          name: "Revolut Payment Gateway for Odoo",
+          applicationCategory: "BusinessApplication",
+          operatingSystem: "Odoo 18, Odoo 19 (Community & Enterprise, on-premise or Odoo.sh)",
+          description:
+            "Accept cards, Revolut Pay, Google Pay and Pay by bank in Odoo via Revolut's PCI-compliant hosted checkout. Supports refunds, manual capture, signature-verified webhooks and 21 currencies.",
+          url: `${SITE_URL}/`,
+          image: OG_IMAGE,
+          author: {
+            "@type": "Organization",
+            name: "Fusion Technologies",
+            url: "https://fusiontechnologies.ie",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Fusion Technologies",
+            url: "https://fusiontechnologies.ie",
+          },
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/InStock",
+            category: "Odoo App",
+          },
+          featureList: [
+            "Cards, Revolut Pay, Google Pay and Pay by bank",
+            "Full and partial refunds",
+            "Signature-verified (HMAC-SHA256) webhooks",
+            "Manual capture",
+            "Multi-currency (21 currencies)",
+            "PCI-compliant hosted checkout",
+          ],
+        }),
+      },
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Fusion Technologies",
+          url: "https://fusiontechnologies.ie",
+          description: "Official Odoo partner. Builders of the Revolut Payment Gateway for Odoo.",
+        }),
+      },
     ],
   }),
   component: Landing,
