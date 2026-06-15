@@ -104,8 +104,8 @@ function Hero() {
           </h1>
           <p className="mt-5 max-w-xl text-balance text-lg leading-relaxed text-muted-foreground">
             Hosted checkout for cards, Revolut Pay, Google Pay and Pay by bank — straight from
-            your Odoo eCommerce checkout and customer invoice portal. Lower fees, zero PCI
-            burden, fully maintained by Fusion Technologies.
+            your Odoo eCommerce checkout and customer invoice portal. PCI-compliant hosted
+            checkout, card data handled by Revolut.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <a
@@ -123,8 +123,8 @@ function Hero() {
           </div>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> Odoo 18 & 19 — Community & Enterprise</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> 90 days free support</div>
-            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> PCI SAQ-A scope</div>
+            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> 30 days setup support</div>
+            <div className="flex items-center gap-2"><Check className="h-4 w-4 text-revolut" /> PCI-compliant hosted checkout</div>
           </div>
         </div>
         <div className="relative">
