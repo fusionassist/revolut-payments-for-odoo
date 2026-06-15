@@ -13,7 +13,7 @@ import {
   Lock,
 } from "lucide-react";
 import fusionLogo from "@/assets/fusion-logo.png";
-import banner from "@/assets/banner.png";
+import banner from "@/assets/revolut-hero.png.asset.json";
 import heroImg from "@/assets/hero-banner.png.asset.json";
 import revolutPay from "@/assets/revolut-pay.png";
 import shotProviders from "@/assets/shot-providers.png";
@@ -356,7 +356,7 @@ function BannerSection() {
     <section className="mx-auto max-w-6xl px-6 py-16">
       <div className="relative overflow-hidden rounded-3xl border border-border shadow-lg-purple">
         <img
-          src={banner}
+          src={banner.url}
           alt="Revolut Payment Gateway for Odoo"
           className="w-full"
         />
